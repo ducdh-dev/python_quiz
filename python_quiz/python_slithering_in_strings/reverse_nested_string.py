@@ -16,6 +16,16 @@ def main(input_string):
             return main(new_str)
 
 
+def reverseInParentheses_3(s):
+    for i in range(len(s)):
+        if s[i] == "(":
+            start = i
+        if s[i] == ")":
+            end = i
+            return reverseInParentheses_3(s[:start] + s[start+1:end][::-1] + s[end+1:])
+    return s
+
+
 def reverseInParentheses_2(inputString):
     stack = []
     for x in inputString:
