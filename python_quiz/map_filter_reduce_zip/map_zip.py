@@ -14,6 +14,9 @@ print(twins_score(b, m))
 # ============================================================================================
 
 def pressure_gauges(morning, evening):
+    print('pressure_gauges')
+    print(*zip(morning, evening))
+    print(*map(sorted, zip(morning, evening)))
     return list(zip(*map(sorted, zip(morning, evening))))  # to unzip map use: zip(*map)
 
 
