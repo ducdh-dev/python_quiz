@@ -87,3 +87,22 @@ def my(arr):
                                  for j in range(len(arr) - 2)]
 
 # ======================================================================================================================
+
+"""
+if else trong mang
+"""
+def arrayReplace(i, e, s):
+    return [x if x != e else s for x in i]
+
+# ======================================================================================================================
+
+"""
+Xác định xem 2 ô cơ có cùng màu ? https://prnt.sc/s29w6y
+"""
+def chessBoardCellColor(cell1, cell2):
+    return (sum(map(ord, cell1+cell2))) % 2 == 0  # Tổng index của các ô trong bảng chia hết cho 2 là cùng màu
+cell1 = "A1"
+cell2 = "C3"
+print(f'{chessBoardCellColor(cell1, cell2)=}')
+
+# ======================================================================================================================
